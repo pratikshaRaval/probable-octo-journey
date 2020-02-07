@@ -1,0 +1,12 @@
+def cow_greek(plainenglish):
+    letters = list(plainenglish.strip())
+    vowels = list('aeiou')
+    index = 0
+    for i,letter in enumerate(letters):
+        if letter in vowels:
+            index = i
+            break
+    return plainenglish[index:] + plainenglish[:index] + 'oo'
+    
+    
+cow_greek('start')
